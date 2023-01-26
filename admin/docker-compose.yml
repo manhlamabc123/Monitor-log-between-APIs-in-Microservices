@@ -7,3 +7,18 @@ services:
       - 8000:8000
     volumes:
       - .:/app
+    depends_on:
+      - database
+
+  database:
+    image: mysql:5.7.22
+    restart: always
+    environment:
+      MYSQL_DATABASE: admin
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 20194616
+      MYSQL_ROOT_PASSWORD: 20194616
+    volumes:
+      - .dbdata:/var/lib/mysql
+    ports:
+      - 33066:3306
