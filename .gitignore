@@ -1,3 +1,4 @@
 admin/admin/__pycache__
 admin/.dbdata
 admin/products/__pycache__
+admin/products/migrations
