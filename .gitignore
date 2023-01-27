@@ -4,3 +4,5 @@ admin/products/__pycache__
 admin/products/migrations
 microservices
 main/.dbdata
+main/__pycache__
+main/migrations
