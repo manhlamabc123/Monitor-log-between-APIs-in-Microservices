@@ -6,3 +6,4 @@ microservices
 main/.dbdata
 main/__pycache__
 main/migrations
+.vscode
