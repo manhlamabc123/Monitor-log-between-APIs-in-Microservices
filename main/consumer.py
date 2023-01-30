@@ -1,7 +1,5 @@
-
+from main import Product, db
 import pika, json
-
-from .main import Product, db
 
 params = pika.URLParameters('amqps://mmbswtkj:86-N4IDgbgw8rOZOsWzJd1tTCA27weth@beaver.rmq.cloudamqp.com/mmbswtkj')
 
