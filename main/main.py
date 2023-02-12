@@ -44,7 +44,8 @@ def like(id):
         db.session.add(productUser)
         db.session.commit()
 
-        publish('product_liked', id)
+        # publish('product_liked', id)
+        publish('product_liked', req)
     except:
         abort(400, 'You already liked this product')
 
