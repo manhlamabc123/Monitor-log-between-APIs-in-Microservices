@@ -11,13 +11,13 @@ services:
     depends_on:
       - database
 
-  queue:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    command: "python consumer.py"
-    depends_on:
-      - database
+  # queue:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   command: "python consumer.py"
+  #   depends_on:
+  #     - database
 
   database:
     image: mysql:5.7.22
