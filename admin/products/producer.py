@@ -10,3 +10,7 @@ channel = connection.channel()
 def publish(method, body):
     properties = pika.BasicProperties(method)
     channel.basic_publish(exchange='', routing_key='main', body=json.dumps(body), properties=properties)
+
+def publish_log(method, body):
+    properties = pika.BasicProperties(method)
+    channel.basic_publish(exchange='', routing_key='log', body=json.dumps(body), properties=properties)
