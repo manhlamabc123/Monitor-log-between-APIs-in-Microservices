@@ -1,0 +1,6 @@
+services:
+  queue:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: "python consumer.py"
