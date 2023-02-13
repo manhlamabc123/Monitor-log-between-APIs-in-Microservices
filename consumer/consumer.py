@@ -1,4 +1,5 @@
 import pika, json
+from rich.pretty import  pretty_repr
 
 params = pika.URLParameters('amqps://mmbswtkj:86-N4IDgbgw8rOZOsWzJd1tTCA27weth@beaver.rmq.cloudamqp.com/mmbswtkj')
 
@@ -11,7 +12,7 @@ channel.queue_declare(queue='log')
 def callback(ch, method, properties, body):
     print('Received in ...')
     data = json.loads(body)
-    print(data)
+    print(pretty_repr(data))
 
     # if properties.content_type == 'product_created':
     #     product = Product(id=data['id'], title=data['title'], image=data['image'])
