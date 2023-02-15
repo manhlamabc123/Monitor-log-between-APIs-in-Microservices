@@ -50,7 +50,7 @@ const Main = () => {
                             Like
                           </button>
                         </div>
-                        <small className="text-muted">{p.likes} likes</small>
+                        <small className="text-muted">likes</small>
                       </div>
                     </div>
                   </div>
