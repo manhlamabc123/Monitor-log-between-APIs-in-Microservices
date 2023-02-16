@@ -24,7 +24,6 @@ def before_request():
     headers = dict(request.headers)
     if correlation_id is None:
         correlation_id = str(int(time.time()))
-        headers['X-My-Correlation-Id'] = correlation_id
     body = bytes(request.data).replace(b"'", b'"')
     if body.decode('utf-8') == '':
         body = '{}'
@@ -33,6 +32,7 @@ def before_request():
         'body': json.loads(body),
         'path': request.path,
         'method': request.method,
+        'correlation_id': correlation_id,
     }
     publish_log('product_liked', req)
 
@@ -65,7 +65,7 @@ def index():
 @app.route('/api/products/<int:id>/like', methods=['POST'])
 def like(id):
     req = requests.get(
-        'http://docker.for.win.localhost:8000/api/user',
+        'http://172.17.0.1:8000/api/user',
         headers={
             'X-My-Correlation-Id': correlation_id
         }
