@@ -10,23 +10,23 @@ const Main = () => {
       const data = await response.json();
       setProducts(data);
     })();
-  });
+  }, []);
 
   const like = async (id: number) => {
     await fetch(`http://localhost:8001/api/products/${id}/like`, {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'}
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
     });
 
-    setProducts(products.map(
-      (p: Product) => {
-        if (p.id === id){
+    setProducts(
+      products.map((p: Product) => {
+        if (p.id === id) {
           p.likes++;
         }
         return p;
-      }
-    ));
-  }
+      })
+    );
+  };
 
   return (
     <main>
