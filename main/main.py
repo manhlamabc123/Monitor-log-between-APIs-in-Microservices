@@ -23,7 +23,7 @@ def before_request():
     correlation_id = request.headers.get('X-My-Correlation-Id')
     headers = dict(request.headers)
     if correlation_id is None:
-        correlation_id = str(int(time.time()))
+        correlation_id = "main-" + str(int(time.time()))
     body = bytes(request.data).replace(b"'", b'"')
     if body.decode('utf-8') == '':
         body = '{}'

@@ -18,7 +18,7 @@ class DemoMiddleware:
         global correlation_id
         correlation_id = request.headers.get('X-My-Correlation-Id')
         if correlation_id is None:
-            correlation_id = str(int(time.time()))
+            correlation_id = "admin-" + str(int(time.time()))
         headers = str(request.headers).replace("'", '"')
         body = bytes(request.body).replace(b"'", b'"')
         if body.decode('utf-8') == '':
