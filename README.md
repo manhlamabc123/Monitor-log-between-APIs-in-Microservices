@@ -94,6 +94,8 @@ docker compose up
 cd react_crud
 npm start
 ```
+### Note:
+* You will have to create and add data User table in Admin Service with 1 columns: ID
 
 ## Correlation ID
 By adding an ID to every APIs, we shall know which APIs are related to each other.
