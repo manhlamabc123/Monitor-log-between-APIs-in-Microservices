@@ -69,6 +69,7 @@ Server: Docker Engine - Community
 * Everything else is in `requirement.txt` file in each service folder
 
 ## How to run
+Open 4 terminals and run each services on different terminal.
 
 ### Admin Service
 ```
