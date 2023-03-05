@@ -33,6 +33,8 @@ Microservice, using 2 diffirent framework `Django` and `Flask`.
 
 ## Technologies
 
+* NodeJS: v14.21.3
+* ReactJS: 18.2.0
 * Docker:
 ```
 Client: Docker Engine - Community
@@ -84,6 +86,12 @@ docker compose up
 ```
 cd consumer
 docker compose up
+```
+
+### Log Service
+```
+cd react_crud
+npm start
 ```
 
 ## Correlation ID
