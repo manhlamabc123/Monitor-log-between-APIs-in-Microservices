@@ -88,7 +88,7 @@ cd consumer
 docker compose up
 ```
 
-### Log Service
+### ReactJS
 ```
 cd react_crud
 npm start
